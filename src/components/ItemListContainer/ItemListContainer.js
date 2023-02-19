@@ -1,14 +1,12 @@
 import './ItemListContainer.scss'
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ( {Product, Description, Price} ) => {
     return (
-        <div>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-            </ul>
-        </div>
+        <ul className="contenedor">
+            <li>Producto: {Product}</li>
+            <li>Descripción: {Description}</li>
+            <li>Precio: {Price}</li>
+        </ul>
+        
     )
 }

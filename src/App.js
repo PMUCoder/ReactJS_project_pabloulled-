@@ -1,14 +1,14 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Navbar } from './components/Navbar/Navbar'
+import { Navibar } from './components/Navibar/Navibar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 
 
 function App () {
   return (
     <div>
-      <Navbar/>
-      <ItemListContainer/>
+      <Navibar/>
+      <ItemListContainer Product="Paraguas" Description="Para dos personas" Price= "3.000,00.-"/>
     </div> 
   )
 }

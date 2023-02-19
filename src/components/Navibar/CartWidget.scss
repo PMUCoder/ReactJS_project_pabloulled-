@@ -1,0 +1,15 @@
+.carritoHeader {
+    position: relative;
+
+    .carritoHeader__carrito {
+        margin-left: 20px;
+        max-width: 30px;
+    }
+
+    .carritoHeader__badge {
+        position: absolute;
+        margin-top: -10px;
+    }
+    
+}
+
