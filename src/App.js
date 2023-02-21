@@ -7,7 +7,7 @@ function App () {
   return (
     <div>
       <Navibar/>
-      <h3 className="itemListContainerStyle">ItemListContainer</h3>
+      <h3 className="itemListContainerStyle">ItemListContainer - Productos Destacados</h3>
       <hr></hr>
       <ItemListContainer Product="Paraguas" Description="Para dos personas" Price= "3.000,00.-"/>
       <ItemListContainer Product="Zapatillas" Description="Tenis talle 42" Price= "25.000,00.-"/>
