@@ -2,18 +2,31 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navibar } from './components/Navibar/Navibar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Nosotros } from './components/Nosotros/nosotros'
+import { Contacto } from './components/Contacto/contacto'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 function App () {
   return (
-    <div>
-      <Navibar/>
-      <h3 className="itemListContainerStyle">ItemListContainer - Productos Destacados</h3>
-      <hr></hr>
-      <ItemListContainer Product="Paraguas" Description="Para dos personas" Price= "3.000,00.-"/>
-      <ItemListContainer Product="Zapatillas" Description="Tenis talle 42" Price= "25.000,00.-"/>
-      <ItemListContainer Product="Raqueta" Description="250grs Oversize" Price= "56.000,00.-"/>
-    </div> 
+
+    <BrowserRouter>
+
+      <Navibar />
+
+      <Routes>
+        <Route path="/" element={ <ItemListContainer /> }/>
+        <Route path="/productos/:categoryId" element={ <ItemListContainer /> }/>
+        <Route path="/detail/:itemId" element={ <ItemDetailContainer /> }/>
+        <Route path="/nosotros" element={ <Nosotros /> }/>
+        <Route path="/contacto" element={ <Contacto /> }/>
+        <Route path="*" element={ <Navigate to ="/" /> }/>
+      </Routes>
+
+      {/* <Footer /> */}
+
+    </BrowserRouter>
   )
 }
 
-export default App;
+export default App

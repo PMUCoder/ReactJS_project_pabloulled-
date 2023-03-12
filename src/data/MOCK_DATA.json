@@ -1,0 +1,50 @@
+[
+    {
+        "Id": 1,
+        "Name": "Producto 1",
+        "Description": "Descripcion Producto 1",
+        "Price": 1500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Papeleria"
+    },
+    {
+        "Id": 2,
+        "Name": "Producto 2",
+        "Description": "Descripcion Producto 2",
+        "Price": 2500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Papeleria"
+    },
+    {
+        "Id": 3,
+        "Name": "Producto 3",
+        "Description": "Descripcion Producto 3",
+        "Price": 3500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Escribir"
+    },
+    {
+        "Id": 4,
+        "Name": "Producto 4",
+        "Description": "Descripcion Producto 4",
+        "Price": 4500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Colorear"
+    },
+    {
+        "Id": 5,
+        "Name": "Producto 5",
+        "Description": "Descripcion Producto 5",
+        "Price": 5500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Escribir"
+    },
+    {
+        "Id": 6,
+        "Name": "Producto 6",
+        "Description": "Descripcion Producto 6",
+        "Price": 6500,
+        "img": "https://via.placeholder.com/220",
+        "Category": "Colorear"
+    }
+]
