@@ -4,6 +4,7 @@ export const Contacto = () => {
         <div className="container my-5">
             <h2>Contacto</h2>
             <hr/>
+            <p>PlaceHolder Datos de Contacto</p>
         </div>
     )
 }

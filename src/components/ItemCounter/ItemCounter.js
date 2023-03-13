@@ -15,7 +15,7 @@ export const ItemCounter = () => {
 
     return (
         <div className="container my-5">
-            <button onClick={handleClickAdd} className="btn btn-success">+</button>
+            <button onClick={handleClickAdd} className="btn btn-success me-2">+</button>
             <button onClick={handleClickSubstract} className="btn btn-danger">-</button>
             <p>Units: {counter}</p>
         </div>
