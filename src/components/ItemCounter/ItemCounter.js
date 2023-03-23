@@ -1,23 +1,25 @@
-import { useState } from "react"
 
-export const ItemCounter = () => {
+import { Link } from 'react-router-dom'
 
-    let [counter,setCounter] = useState(0)
-    const stock = 15
+export const ItemCounter = ({max, counter, setCounter, handleAddToCart}) => {
 
-    const handleClickAdd = () => {
-        setCounter (counter<stock ? counter+1 : counter=stock)
+    const handleAdd = () => {
+        counter < max && setCounter(counter + 1)
     }
 
-    const handleClickSubstract = () => {
-        setCounter (counter<1 ? counter=0 : counter-1)
+    const handleSubstract = () => {
+        counter > 1 && setCounter(counter - 1)
     }
 
     return (
         <div className="container my-5">
-            <button onClick={handleClickAdd} className="btn btn-success me-2">+</button>
-            <button onClick={handleClickSubstract} className="btn btn-danger">-</button>
+            <button onClick={handleAdd} className="btn btn-success me-2">+</button>
+            <button onClick={handleSubstract} className="btn btn-danger">-</button>
             <p>Units: {counter}</p>
+            <button onClick={handleAddToCart} className="btn btn-success me-2">Comprar</button>
+                <Link to="/">
+                    <button className="btn btn-danger">Cancelar</button>
+                </Link>
         </div>
     )
 }

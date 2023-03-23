@@ -8,24 +8,26 @@ import { Contacto } from './components/Contacto/contacto'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 function App () {
+  
   return (
 
-    <BrowserRouter>
+      <BrowserRouter>
 
-      <Navibar />
+        <Navibar />
 
-      <Routes>
-        <Route path="/" element={ <ItemListContainer /> }/>
-        <Route path="/productos/:categoryId" element={ <ItemListContainer /> }/>
-        <Route path="/detail/:itemId" element={ <ItemDetailContainer /> }/>
-        <Route path="/nosotros" element={ <Nosotros /> }/>
-        <Route path="/contacto" element={ <Contacto /> }/>
-        <Route path="*" element={ <Navigate to ="/" /> }/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={ <ItemListContainer /> }/>
+          <Route path="/productos/:categoryId" element={ <ItemListContainer /> }/>
+          <Route path="/detail/:itemId" element={ <ItemDetailContainer /> }/>
+          <Route path="/nosotros" element={ <Nosotros /> }/>
+          <Route path="/contacto" element={ <Contacto /> }/>
+          <Route path="*" element={ <Navigate to ="/" /> }/>
+        </Routes>
 
-      {/* <Footer /> */}
+        {/* <Footer /> */}
 
-    </BrowserRouter>
+      </BrowserRouter>
+
   )
 }
 
