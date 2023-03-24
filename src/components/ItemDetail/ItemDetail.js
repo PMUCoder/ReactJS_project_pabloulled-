@@ -1,20 +1,23 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
 import { ItemCounter } from "../ItemCounter/ItemCounter"
-// import { ColorPicker } from "../../support-fn/ColorPicker"
 import './ItemDetail.scss'
 
 export const ItemDetail = ({item}) => {
 
+    const {addToCart, isInCart} = useContext(CartContext)
+
+
     const [counter,setCounter] = useState(1)
-    // const [color, setColor] = useState(null)
-    // console.log(color)
 
     const handleAddToCart = () => {
         const newItem = {
             ...item,
             counter
         }
-        console.log(newItem)
+        
+        addToCart(newItem)
     }
 
     return (
@@ -27,14 +30,19 @@ export const ItemDetail = ({item}) => {
                 <p>Descripcion: {item.Description}</p>
                 <p>Precio: ${item.Price}</p>
                 <p>Stock Disponible: {item.Stock}u.</p>
-                {/* <ColorPicker setColor={setColor} options={item.Colors}/> */}
-                <ItemCounter 
-                    max={item.Stock}
-                    counter={counter}
-                    setCounter={setCounter}
-                    handleAddToCart={handleAddToCart}
-                />
-                <hr/>
+                    {/* <ColorPicker setColor={setColor} options={item.Colors}/> */}
+
+                {
+                    isInCart(item.Id)
+                        ?   <Link to="/cart" className="btn btn-success my-2">Ir al Carrito</Link>
+                        :   <ItemCounter 
+                                max={item.Stock}
+                                counter={counter}
+                                setCounter={setCounter}
+                                handleAddToCart={handleAddToCart}
+                            />
+                }  
+                <br/>
             </div>
         </div>
     )
