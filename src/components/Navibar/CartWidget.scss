@@ -1,15 +1,26 @@
-.carritoHeader {
+.cartHeader {
     position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
 
-    .carritoHeader__Carrito {
+    .cartHeader__Cart {
+        position: absolute;
+        margin-top: -10px;
         margin-left: 20px;
         max-width: 30px;
     }
 
-    .carritoHeader__Badge {
+    .cartHeader__Badge {
         position: absolute;
-        margin-top: -5px;
+        margin-left: 40px;        
+        margin-top: -15px;
     }
     
 }
 
+.cartWidgetVisible {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s;
+}

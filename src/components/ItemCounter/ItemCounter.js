@@ -13,13 +13,24 @@ export const ItemCounter = ({max, counter, setCounter, handleAddToCart}) => {
 
     return (
         <div className="container my-5">
-            <button onClick={handleAdd} className="btn btn-success me-2">+</button>
-            <button onClick={handleSubstract} className="btn btn-danger">-</button>
+            <button 
+                onClick={handleSubstract} 
+                className={`btn btn-${counter === 1 ? "outline-danger" : "danger"} me-2`}
+                disabled={counter === 1}>
+                -
+            </button>
+            <button
+                onClick={handleAdd} 
+                className={`btn btn-${counter === max ? "outline-success" : "success"} me-2`}
+                disabled={counter === max}>
+                +
+            </button>
             <p>Units: {counter}</p>
-            <button onClick={handleAddToCart} className="btn btn-success me-2">Comprar</button>
-                <Link to="/">
-                    <button className="btn btn-danger">Cancelar</button>
-                </Link>
+            <Link to="/">
+                <button className="btn btn-danger me-2">Cancelar</button>
+            </Link>
+            <button onClick={handleAddToCart} className="btn btn-success">Comprar</button>
+
         </div>
     )
 }
