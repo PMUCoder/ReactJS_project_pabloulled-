@@ -1,40 +1,23 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Navibar } from './components/Navibar/Navibar'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
-import { Nosotros } from './components/Nosotros/nosotros'
-import { Contacto } from './components/Contacto/contacto'
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { CartProvider } from './context/CartContext'
-import { Cart } from './components/Cart/Cart'
+import { LoginProvider } from './context/LoginContext'
+import { AppRouter } from './Routes/AppRouter'
 
 function App () {
 
   return (
 
-    <CartProvider>
+    <LoginProvider>
 
-      <BrowserRouter>
+      <CartProvider>
 
-        <Navibar />
+        <AppRouter></AppRouter>
 
-        <Routes>
-          <Route path="/" element={ <ItemListContainer /> }/>
-          <Route path="/productos/:categoryId" element={ <ItemListContainer /> }/>
-          <Route path="/detail/:itemId" element={ <ItemDetailContainer /> }/>
-          <Route path="/cart" element={ <Cart /> }/>
-          <Route path="/nosotros" element={ <Nosotros /> }/>
-          <Route path="/contacto" element={ <Contacto /> }/>
-          <Route path="*" element={ <Navigate to ="/" /> }/>
-        </Routes>
+      </CartProvider>
 
-        {/* <Footer /> */}
-
-      </BrowserRouter>
-
-    </CartProvider>
-  )
+    </LoginProvider>
+    )
 }
 
 export default App
