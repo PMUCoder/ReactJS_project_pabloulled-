@@ -27,13 +27,13 @@ export const Cart = () =>{
 
             {
                 cart.map((prod) => (
-                    <div key={prod.Id}>
+                    <div key={prod.id}>
                         <h4>{prod.Name}</h4>
                         <img className="cartImg" src={prod.img} alt={prod.Name}/>
                         <p>Precio por Unidad: ${prod.Price}</p>
                         <p>Cantidad: {prod.counter}u.</p> 
                         <p>Precio Total: ${prod.Price * prod.counter}</p>                       
-                        <button onClick={ () => deleteItemFromCart (prod.Id) } className="btn btn-danger"><BsFillTrashFill/></button>
+                        <button onClick={ () => deleteItemFromCart (prod.id) } className="btn btn-danger"><BsFillTrashFill/></button>
                         <hr/>
                     </div>
                 ))

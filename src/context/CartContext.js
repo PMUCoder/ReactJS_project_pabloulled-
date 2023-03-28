@@ -11,7 +11,7 @@ export const CartProvider = ( {children} ) => {
     }
 
     const isInCart = (id) => {
-        return cart.some((prod) => prod.Id === id)
+        return cart.some((prod) => prod.id === id)
     }
 
     const totalQuantity = () => {
@@ -27,7 +27,7 @@ export const CartProvider = ( {children} ) => {
     }
 
     const deleteItemFromCart = (id) => {
-        setCart(cart.filter((prod) => prod.Id !==id))
+        setCart(cart.filter((prod) => prod.id !==id))
     }
 
     return (

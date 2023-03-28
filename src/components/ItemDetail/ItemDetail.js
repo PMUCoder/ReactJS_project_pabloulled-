@@ -44,7 +44,7 @@ export const ItemDetail = ({item}) => {
                 {item.Stock <= 5 && <LowStockMsg stock={item.Stock}/>}
 
                 {
-                    isInCart(item.Id)
+                    isInCart(item.id)
                         ?   <Link to="/cart" className="btn btn-success my-2">Ir al Carrito</Link>
                         :   <ItemCounter 
                                 max={item.Stock}
