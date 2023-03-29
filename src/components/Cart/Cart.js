@@ -41,7 +41,7 @@ export const Cart = () =>{
 
             <h3>TOTAL: ${totalPurchase().toFixed(2)}</h3>
             <button onClick={emptyCart} className="btn btn-danger">Vaciar Carrito</button>
-        
+            <Link className="btn btn-success mx-2" to="/checkout">Finalizar Compra</Link>
         </div> 
 
     )
