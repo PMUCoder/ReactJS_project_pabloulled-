@@ -33,7 +33,7 @@ export const Navibar = () => {
           </Navbar>
         </>
       </div>
-      <div className="bg-primary">
+      <div className="bg-dark">
         <div className="loginState container">
           <h6>Bienvenido: {user.email}</h6>
           <button className="btn btn-danger" onClick={logout}>Logout</button>
