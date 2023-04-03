@@ -4,7 +4,7 @@ import './Item.scss'
 export const Item = ({item}) => {
 
     return (
-        <div className= 'col-3 m-1 card'>
+        <div className= 'col-3 m-3 card cardStyle'>
             <img src={item.img} className="rounded-2 picts" alt={item.Name}/>
             <h4> {item.Name} </h4> 
             <p>{item.Description}</p>
