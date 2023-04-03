@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom'
 
 export const ItemCounter = ({max, counter, setCounter, handleAddToCart}) => {
@@ -30,7 +29,6 @@ export const ItemCounter = ({max, counter, setCounter, handleAddToCart}) => {
                 <button className="btn btn-danger me-2">Cancelar</button>
             </Link>
             <button onClick={handleAddToCart} className="btn btn-success">Comprar</button>
-
         </div>
     )
 }

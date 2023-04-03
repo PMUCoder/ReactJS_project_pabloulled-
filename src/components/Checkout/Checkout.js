@@ -1,15 +1,13 @@
 import { useContext, useState } from "react"
 import { Link, Navigate } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
-import { collection, addDoc, updateDoc, getDoc, doc } from "firebase/firestore"
 import { db } from "../../firebase/config"
+import { collection, addDoc, writeBatch, query, where, documentId, getDocs} from "firebase/firestore"
 
 export const Checkout = () => {
 
-    const { cart, totalPurchase, emptyCart } = useContext(CartContext)
-    
-    const {orderId, setOrderId} = useState[null]
-
+    const {cart, totalPurchase, emptyCart} = useContext(CartContext)
+    const [orderId, setOrderId] = useState(null)
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
@@ -23,7 +21,7 @@ export const Checkout = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if (values.nombre.length < 3) {
             alert("Nombre Inválido")
@@ -37,7 +35,7 @@ export const Checkout = () => {
             alert("Email Inválido")
             return
         }
-
+        
         const orden = {
             usuario: values,
             items: cart.map((prod) => ({id: prod.id, price: prod.Price, cantidad: prod.counter, name: prod.Name})),
@@ -45,34 +43,34 @@ export const Checkout = () => {
             fecha: new Date()
         }
 
-        const productsRef = collection(db, 'products')
-        
-        cart.forEach((item) => {
-            const docRef = doc(productsRef, item.id)
-        
-            getDoc(docRef)
-                .then((doc) => {
-                    if(doc.data().stock >= item.counter) {
-                        updateDoc(docRef, {
-                            stock: doc.data().Stock - item.counter
-                        })
-                    } else {
-                        alert("En este momento no contamos con stock suficiente de " + item.Name + ".Intenta nuevamente mas tarde.")
-                    }
+        const batch = writeBatch(db)
+        const ordersRef = collection(db, 'orders')
+        const productsRef = collection(db, 'productos')
+        const outOfStock = []
+        const itemsRef = query (productsRef, where (documentId(), 'in', cart.map(prod => prod.id)))
+        const response = await getDocs(itemsRef)
 
+        response.docs.forEach((doc) => {
+            const item = cart.find(prod => prod.id === doc.id)
+            if(doc.data().Stock >= item.counter) {
+                batch.update(doc.ref, {
+                    Stock: doc.data().Stock - item.counter
                 })
-        
-
+            } else {
+                outOfStock.push(item)
+            }
         })
 
-        const ordersRef = collection(db, 'orders')
-        
-        addDoc(ordersRef, orden)
+        if (outOfStock.length === 0) {
+            await batch.commit()
+            addDoc(ordersRef, orden)
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart()
             })
-
+        } else {
+            alert("Error en el pedido, no hay stock suficiente")
+        }
     }
 
     if (orderId) {
@@ -94,9 +92,7 @@ export const Checkout = () => {
         <div className= "container my-5">
             <h2>Checkout</h2>
             <hr/>
-
             <form onSubmit={handleSubmit}>
-
                 <input
                     onChange={handleInputChange}
                     value={values.nombre}
@@ -105,7 +101,6 @@ export const Checkout = () => {
                     className="form-control my-2"
                     name="nombre"
                 />
-
                 <input
                     onChange={handleInputChange}
                     value={values.direccion}
@@ -114,7 +109,6 @@ export const Checkout = () => {
                     className="form-control my-2"
                     name="direccion"
                 />
-
                 <input
                     onChange={handleInputChange}
                     value={values.email}
@@ -123,11 +117,8 @@ export const Checkout = () => {
                     className="form-control my-2"
                     name="email"
                 />
-
                 <button className="btn btn-primary" type="submit">Enviar</button>
-
             </form>
-
         </div>
     )
 }

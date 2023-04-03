@@ -23,7 +23,7 @@ export const ItemDetail = ({item}) => {
     if (item.Stock === 0) {
         return (
             <div className = "container my-5">
-                Disculpas, en este momento no hay stock de este producto. Te enviaremos una notificación cuando recibamos.
+                <p>Disculpas, en este momento no hay stock de este producto. Te enviaremos una notificación cuando recibamos.</p>
                 <br></br>
                 <br></br>
                 <Link to="/" className="btn btn-primary">Volver</Link>

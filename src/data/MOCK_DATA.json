@@ -49,8 +49,134 @@
         "Name": "Tempera (Pack)",
         "Description": "Pack de 10 Temperas colores basicos",
         "Price": 1100,
-        "img": "../img/tempera.webp",
+        "img": "../img/tempera pack.webp",
         "Category": "Colorear",
         "Stock": 40
+    },
+    {
+        "Id": 7,
+        "Name": "Portaminas PIZZINI 1431F",
+        "Description": "Portaminas PIZZINI 1431F mina 0,5 dibujo tecnico grip clip metal",
+        "Price": 1067,
+        "img": "../img/portaminas.jpg",
+        "Category": "Escribir",
+        "Stock": 32
+    },
+    {
+        "Id": 8,
+        "Name": "Goma Staedtler",
+        "Description": "Goma de borrar Staedtler tinta-lápiz",
+        "Price": 300,
+        "img": "../img/goma.webp",
+        "Category": "Escribir",
+        "Stock": 50
+    },
+    {
+        "Id": 9,
+        "Name": "ACUARELA ALBA",
+        "Description": "ACUARELA ALBA - ESTUCHE X 21 COLORES",
+        "Price": 1600,
+        "img": "../img/acuarela.png",
+        "Category": "Colorear",
+        "Stock": 70
+    },
+    {
+        "Id": 10,
+        "Name": "TEMPERA PLAYCOLOR",
+        "Description": "TEMPERA PLAYCOLOR POTE X300GRS.ROJO",
+        "Price": 470,
+        "img": "../img/tempera.webp",
+        "Category": "Colorear",
+        "Stock": 25
+    },
+    {
+        "Id": 11,
+        "Name": "Notas Adhesivas Post It",
+        "Description": "Notas Adhesivas Post It 654 76x76mm X500hs Fluo Cape Town",
+        "Price": 2600,
+        "img": "../img/post it.jpg",
+        "Category": "Papeleria",
+        "Stock": 150
+    },
+    {
+        "Id": 12,
+        "Name": "Sobres madera",
+        "Description": "Sobres madera calidad Kraft - eco amigable",
+        "Price": 600,
+        "img": "../img/sobres.jpg",
+        "Category": "Papeleria",
+        "Stock": 1500
+    },
+    {
+        "Id": 13,
+        "Name": "Marcadores Pelikan",
+        "Description": "Marcadores Punta Pincel Pelikan MARKANA Pastel X12 - con estuche plastico",
+        "Price": 5000,
+        "img": "../img/marcadores.jpg",
+        "Category": "Colorear",
+        "Stock": 150
+    },
+    {
+        "Id": 14,
+        "Name": "Marcadores Ohuhu",
+        "Description": "Juego de marcadores de arte a base de alcohol de doble punta",
+        "Price": 5790,
+        "img": "../img/caja marcadores.jpg",
+        "Category": "Colorear",
+        "Stock": 20
+    },
+    {
+        "Id": 15,
+        "Name": "Lapiz Staedtler",
+        "Description": "Lapiz Staedtler Noris N° Hb, B, 2b, 3 X 6 unidades",
+        "Price": 2100,
+        "img": "../img/lapiz negro.jpg",
+        "Category": "Escribir",
+        "Stock": 100
+    },
+    {
+        "Id": 16,
+        "Name": "Escuadra PIZZINI",
+        "Description": "Escuadra PIZZINI multiuso",
+        "Price": 700,
+        "img": "../img/escuadra.jpeg",
+        "Category": "Escribir",
+        "Stock": 78
+    },
+    {
+        "Id": 17,
+        "Name": "Cartulina color",
+        "Description": "Cartulina Iris x25 unidades 1/2 pliego 70x50 cms",
+        "Price": 3500,
+        "img": "../img/cartulina.jpg",
+        "Category": "Papeleria",
+        "Stock": 266
+    },
+    {
+        "Id": 18,
+        "Name": "Pinceles x9",
+        "Description": "Juego de 9 pinceles para acuarela (cerdas de nailon, mango largo)",
+        "Price": 23000,
+        "img": "../img/pinceles.jpg",
+        "Category": "Colorear",
+        "Stock": 15
+    },
+    {
+        "Id": 19,
+        "Name": "Cuaderno ABC",
+        "Description": "Notas Adhesivas Post It 654 76x76mm X500hs Fluo Cape Town",
+        "Price": 2600,
+        "img": "../img/cuaderno.webp",
+        "Category": "Papeleria",
+        "Stock": 150
+    },
+    {
+        "Id": 20,
+        "Name": "Tijera",
+        "Description": "Fast Tijera Escolar Softy 5''",
+        "Price": 800,
+        "img": "../img/tijera.jpg",
+        "Category": "Papeleria",
+        "Stock": 35
     }
-]
+    ]
