@@ -55,7 +55,7 @@
     },
     {
         "Id": 7,
-        "Name": "Portaminas PIZZINI 1431F",
+        "Name": "Portaminas Pizzini 1431F",
         "Description": "Portaminas PIZZINI 1431F mina 0,5 dibujo tecnico grip clip metal",
         "Price": 1067,
         "img": "../img/portaminas.jpg",
@@ -73,8 +73,8 @@
     },
     {
         "Id": 9,
-        "Name": "ACUARELA ALBA",
-        "Description": "ACUARELA ALBA - ESTUCHE X 21 COLORES",
+        "Name": "Acuarela ALBA",
+        "Description": "Acuarela ALBA - Estuche X 21 colores",
         "Price": 1600,
         "img": "../img/acuarela.png",
         "Category": "Colorear",
@@ -82,8 +82,8 @@
     },
     {
         "Id": 10,
-        "Name": "TEMPERA PLAYCOLOR",
-        "Description": "TEMPERA PLAYCOLOR POTE X300GRS.ROJO",
+        "Name": "Tempera Playcolor",
+        "Description": "Tempera Playcolor pote X300grs. Rojo",
         "Price": 470,
         "img": "../img/tempera.webp",
         "Category": "Colorear",
@@ -136,8 +136,8 @@
     },
     {
         "Id": 16,
-        "Name": "Escuadra PIZZINI",
-        "Description": "Escuadra PIZZINI multiuso",
+        "Name": "Escuadra Pizzini",
+        "Description": "Escuadra Pizzini multiuso",
         "Price": 700,
         "img": "../img/escuadra.jpeg",
         "Category": "Escribir",

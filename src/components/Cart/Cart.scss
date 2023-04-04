@@ -1,4 +1,8 @@
-.cartImg {
-    height: 100px;
-    width: 100px;
+.cartP {
+    max-width: 800px;
+    
+    .cartP__cartImg {
+        height: 80px;
+        width: 80px;
+    }
 }

@@ -53,6 +53,7 @@ export const ItemDetail = ({item}) => {
                                 handleAddToCart={handleAddToCart}
                             />
                 }  
+                <Link to="/" className="btn btn-primary my-2 mx-2">Seguir Comprando</Link>
                 <br/>
             </div>
         </div>
