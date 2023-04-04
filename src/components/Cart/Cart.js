@@ -39,7 +39,7 @@ export const Cart = () =>{
                             <div className="col mx-auto p-2">
                                 <p>Precio por Unidad: ${prod.Price}</p>
                                 <p>Cantidad: {prod.counter}u.</p> 
-                                <p>Precio Total: ${prod.Price * prod.counter}</p>                       
+                                <p>Precio Total: ${prod.Price * prod.counter}</p> 
                             </div>
                             <div className="col my-auto p-2 text-center">
                                 <button onClick={ () => deleteItemFromCart (prod.id) } className="btn btn-danger align-middle"><BsFillTrashFill/></button>
