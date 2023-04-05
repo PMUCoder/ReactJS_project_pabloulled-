@@ -25,7 +25,7 @@ export const LoginScreen = () => {
     }
 
     return (
-        <div className="loginScreen">
+        <div className="bg-primary loginScreen">
             <div className="login">
                 <h2>Login Page</h2>
                 <hr/>
